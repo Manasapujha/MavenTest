@@ -1,9 +1,10 @@
 package com.test;
 
-public class TestClass {
-	public String Sample() 
-	{
-		return "testString";
-	}
+public class TestClass
+{
+    public String Sample()
+    {
+        return "testString";
+    }
 
 }
