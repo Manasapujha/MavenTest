@@ -10,18 +10,20 @@ public class AppConfig
     @Bean
     public Foo foo()
     {
-        return new Foo(bar());
+       // return new Foo(bar());
+        return null;
     }
 
     @Bean
     public Bar bar()
     {
-        return new Bar();
+        //return new Bar();
+        return null;
     }
 }
 
-@Configuration
-public class AppConfig
+//@Configuration
+/*public class AppConfig
 {
     @Bean
     @Scope("prototype")
@@ -29,4 +31,4 @@ public class AppConfig
     {
         return new Foo();
     }
-}
+}*/

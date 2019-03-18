@@ -1,6 +1,7 @@
 package com.tutorialspoint;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -58,6 +59,19 @@ public class MainApp
 
         HelloWorld objB3 = (HelloWorld) context3.getBean("helloWorld");
         objB3.getMessage();
+
+        // Event handling
+        ConfigurableApplicationContext context6 =
+                new ClassPathXmlApplicationContext("Beans_EventHandler.xml");
+
+        // Let us raise a start event.
+        context6.start();
+
+        HelloWorld obj6 = (HelloWorld) context6.getBean("helloWorld");
+        obj6.getMessage();
+
+        // Let us raise a stop event.
+        context6.stop();
 
         // Inner Beans
         ApplicationContext context4 = new ClassPathXmlApplicationContext("Beans_InnerBean.xml");

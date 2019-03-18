@@ -16,8 +16,8 @@ public class Foo
     }
 }
 
-@Configuration
-public class AppConfig
+//@Configuration
+/*public class AppConfig
 {
     @Bean(initMethod = "init", destroyMethod = "cleanup")
     public Foo foo()
@@ -25,3 +25,4 @@ public class AppConfig
         return new Foo();
     }
 }
+*/
